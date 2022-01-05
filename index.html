@@ -19,9 +19,10 @@
       <h1>FIND YOUR MATCH</h1>
 
       <p>What are looking for:</p>
-      <div class="dropdown">
+      <div class="dropdown m-3">
         <button
-          class="btn btn-secondary dropdown-toggle"
+          style="width: 300px"
+          class="btn btn-secondary dropdown-toggle btn-lg"
           type="button"
           id="dropdownMenuButton1"
           data-bs-toggle="dropdown"
@@ -44,6 +45,53 @@
               href="#"
               @click.prevent="setSelectGenderText('Women')"
               >Women</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="dropdown m-3">
+        <button
+          style="width: 300px"
+          class="btn btn-secondary dropdown-toggle btn-lg"
+          type="button"
+          id="dropdownMenuButton1"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          {{ selectAgeText }}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li>
+            <a
+              class="dropdown-item"
+              href="#"
+              @click.prevent="setSelectAgeText('18 - 30 years old')"
+              >18 - 30 years old</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              href="#"
+              @click.prevent="setSelectAgeText('30 - 40 years old')"
+              >30 - 40 years old</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              href="#"
+              @click.prevent="setSelectAgeText('40 - 50 years old')"
+              >40 - 50 years old</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              href="#"
+              @click.prevent="setSelectAgeText('50+ years old')"
+              >50+ years old</a
             >
           </li>
         </ul>
