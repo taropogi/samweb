@@ -15,7 +15,7 @@
     <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="app">
       <h1>FIND YOUR MATCH</h1>
 
       <p>What are looking for:</p>
@@ -27,11 +27,25 @@
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Select Gender
+          {{ selectGenderText }}
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">Men</a></li>
-          <li><a class="dropdown-item" href="#">Women</a></li>
+          <li>
+            <a
+              class="dropdown-item"
+              href="#"
+              @click.prevent="setSelectGenderText('Men')"
+              >Men</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              href="#"
+              @click.prevent="setSelectGenderText('Women')"
+              >Women</a
+            >
+          </li>
         </ul>
       </div>
     </div>
@@ -46,5 +60,7 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+
+    <script src="assets/app.js"></script>
   </body>
 </html>
