@@ -12,17 +12,25 @@
       crossorigin="anonymous"
     />
 
+    <link rel="stylesheet" href="assets/css/app.css" />
+
     <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
-    <div class="container" id="app">
-      <h1>FIND YOUR MATCH</h1>
+    <div class="container text-center p-3" id="app">
+      <h1 class="text-white">
+        FIND
+        <br />
+        YOUR
+        <br />
+        MATCH
+      </h1>
 
       <p>What are looking for:</p>
       <div class="dropdown m-3">
         <button
-          style="width: 300px"
-          class="btn btn-secondary dropdown-toggle btn-lg"
+          style="width: 300px; background-color: white"
+          class="btn btn-secondary dropdown-toggle btn-lg text-dark"
           type="button"
           id="dropdownMenuButton1"
           data-bs-toggle="dropdown"
@@ -52,8 +60,8 @@
 
       <div class="dropdown m-3">
         <button
-          style="width: 300px"
-          class="btn btn-secondary dropdown-toggle btn-lg"
+          style="width: 300px; background-color: white"
+          class="btn btn-secondary dropdown-toggle btn-lg text-dark"
           type="button"
           id="dropdownMenuButton1"
           data-bs-toggle="dropdown"
@@ -96,6 +104,14 @@
           </li>
         </ul>
       </div>
+
+      <button
+        type="button"
+        class="btn btn-primary btn-lg m-3"
+        style="width: 300px; background-color: #8808f7"
+      >
+        FIND MATCH
+      </button>
     </div>
 
     <script
@@ -109,6 +125,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="assets/app.js"></script>
+    <script src="assets/js/app.js"></script>
   </body>
 </html>
