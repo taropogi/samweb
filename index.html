@@ -12,40 +12,28 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="assets/css/app.css" />
+    <link rel="stylesheet" href="assets/css/app.css?v=1" />
 
     <script src="https://unpkg.com/vue@next"></script>
   </head>
 
-  <body>
+  <body
+    style="
+      background-image: url('assets/images/bg.jpg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+    "
+  >
     <div
       class="container text-center p-3 d-flex justify-content-center"
       id="app"
     >
-      <div
-        class="border"
-        style="width: 400px; background-image: url('assets/images/bg.jpg')"
-      >
+      <div class="box border" style="width: 400px">
         <img
           src="assets/images/banner-trans.png"
           class="img-fluid"
           style="width: 400px"
         />
-        <h1
-          v-if="false"
-          style="
-            color: #f8cdf9;
-            font-weight: 900;
-            font-size: 50px;
-            letter-spacing: 4px;
-          "
-        >
-          FIND
-          <br />
-          YOUR
-          <br />
-          MATCH
-        </h1>
 
         <p class="text-white">What are looking for:</p>
         <div class="dropdown m-3">
