@@ -37,99 +37,102 @@
         />
 
         <p class="text-white">What are looking for:</p>
-        <div class="dropdown m-3">
-          <button
-            style="width: 300px; background-color: #f8cdf9"
-            class="btn btn-secondary dropdown-toggle btn-lg text-dark"
-            type="button"
-            id="dropdownMenuButton1"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            {{ selectGenderText }}
-          </button>
-          <ul
-            class="dropdown-menu"
-            aria-labelledby="dropdownMenuButton1"
-            style="width: 300px"
-          >
-            <li>
-              <a
-                class="dropdown-item"
-                href="#"
-                @click.prevent="setSelectGenderText('Men')"
-                >Men</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="#"
-                @click.prevent="setSelectGenderText('Women')"
-                >Women</a
-              >
-            </li>
-          </ul>
-        </div>
+        <form @submit.prevent="submitForm">
+          <div class="dropdown m-3">
+            <button
+              style="width: 300px; background-color: #f8cdf9"
+              class="btn btn-secondary dropdown-toggle btn-lg text-dark"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {{ selectGenderText }}
+            </button>
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="dropdownMenuButton1"
+              style="width: 300px"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  @click.prevent="setSelectGenderText('Men')"
+                  >Men</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  @click.prevent="setSelectGenderText('Women')"
+                  >Women</a
+                >
+              </li>
+            </ul>
+          </div>
 
-        <div class="dropdown m-3">
-          <button
-            style="width: 300px; background-color: #f8cdf9"
-            class="btn dropdown-toggle btn-lg text-dark"
-            type="button"
-            id="dropdownMenuButton1"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            {{ selectAgeText }}
-          </button>
-          <ul
-            class="dropdown-menu"
-            aria-labelledby="dropdownMenuButton1"
-            style="width: 300px"
-          >
-            <li>
-              <a
-                class="dropdown-item"
-                href="#"
-                @click.prevent="setSelectAgeText('18 - 30 years old')"
-                >18 - 30 years old</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="#"
-                @click.prevent="setSelectAgeText('30 - 40 years old')"
-                >30 - 40 years old</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="#"
-                @click.prevent="setSelectAgeText('40 - 50 years old')"
-                >40 - 50 years old</a
-              >
-            </li>
-            <li>
-              <a
-                class="dropdown-item"
-                href="#"
-                @click.prevent="setSelectAgeText('50+ years old')"
-                >50+ years old</a
-              >
-            </li>
-          </ul>
-        </div>
+          <div class="dropdown m-3">
+            <button
+              style="width: 300px; background-color: #f8cdf9"
+              class="btn dropdown-toggle btn-lg text-dark"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {{ selectAgeText }}
+            </button>
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="dropdownMenuButton1"
+              style="width: 300px"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  @click.prevent="setSelectAgeText(age1)"
+                  >{{ age1 }}</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  @click.prevent="setSelectAgeText(age2)"
+                >
+                  {{ age2 }}
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  @click.prevent="setSelectAgeText(age3)"
+                  >{{ age3 }}</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  @click.prevent="setSelectAgeText(age4)"
+                  >{{ age4 }}</a
+                >
+              </li>
+            </ul>
+          </div>
 
-        <button
-          type="button"
-          class="btn btn-primary btn-lg m-3"
-          style="width: 300px; background-color: #8808f7; font-weight: 900"
-        >
-          FIND MATCH
-        </button>
+          <button
+            type="submit"
+            class="btn btn-primary btn-lg m-3"
+            style="width: 300px; background-color: #8808f7; font-weight: 900"
+          >
+            FIND MATCH
+          </button>
+        </form>
       </div>
     </div>
 
@@ -144,6 +147,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/app.js?v=2"></script>
   </body>
 </html>
