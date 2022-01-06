@@ -2,3 +2,8 @@
   background-image: linear-gradient(#36a8e1, #312884);
   background-attachment: fixed;
 }
+
+html,
+body {
+  height: 100%;
+}
